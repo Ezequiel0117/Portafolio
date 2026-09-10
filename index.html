@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ezequiel | Portafolio - Ingeniería de Software</title>
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container navbar">
+        <div class="logo">Ezequiel.dev</div>
+        <nav>
+          <ul class="nav-links" id="nav-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="design-system.html">Design System</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+        <div>
+          <button
+            class="theme-toggle"
+            id="theme-toggle"
+            aria-label="Activar modo oscuro"
+          >
+            <img
+              src="assets/icons/moon-stars.svg"
+              alt=""
+              class="theme-icon theme-icon-moon"
+              aria-hidden="true"
+            />
+            <img
+              src="assets/icons/sun.svg"
+              alt=""
+              class="theme-icon theme-icon-sun"
+              aria-hidden="true"
+              hidden
+            />
+          </button>
+          <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+            ☰
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="inicio" class="container hero">
+        <div class="hero-text">
+          <h1>Hola, soy Ezequiel</h1>
+          <h2>Estudiante de Ingeniería de Software</h2>
+          <p>
+            Apasionado por el desarrollo de software, la visión artificial y la
+            creación de soluciones tecnológicas eficientes.
+          </p>
+          <br />
+          <a href="#proyectos" class="btn btn-primary">Ver mis proyectos</a>
+          <a href="#contacto" class="btn btn-secondary">Contáctame</a>
+        </div>
+        <figure>
+          <img
+            src="assets/img/nero.jpg"
+            alt="Fotografía de Ezequiel"
+            class="hero-img"
+          />
+        </figure>
+      </section>
+
+      <section id="sobre-mi" class="container">
+        <h2 class="section-title">Sobre mí</h2>
+        <article>
+          <p>
+            Soy estudiante de Ingeniería de Software con un fuerte interés en
+            Machine Learning y desarrollo de aplicaciones multiplataforma. Me
+            motiva resolver problemas complejos mediante la programación, desde
+            la optimización de procesos hasta la implementación de modelos de
+            redes neuronales (como CNNs y YOLO).
+          </p>
+        </article>
+      </section>
+
+      <section id="habilidades" class="container">
+        <h2 class="section-title">Habilidades Técnicas</h2>
+        <ul class="skills-grid" id="skills-list"></ul>
+      </section>
+
+      <section id="proyectos" class="container">
+        <h2 class="section-title">Proyectos Destacados</h2>
+        <div class="grid-cards">
+          <article class="card">
+            <img
+              src="https://via.placeholder.com/400x200"
+              alt="Captura de la App Financiera"
+              class="card-img"
+            />
+            <div class="card-content">
+              <h3 class="card-title">App de Control Financiero</h3>
+              <p>
+                Aplicación móvil para la gestión financiera utilizando
+                reconocimiento de voz y OCR para procesar recibos. Incluye un
+                motor de reglas asíncrono.
+              </p>
+              <div class="project-tags">
+                <span class="badge">Flutter</span>
+                <span class="badge">Python</span>
+                <span class="badge">Whisper</span>
+              </div>
+              <br />
+              <a href="#" class="btn btn-secondary">Ver repositorio</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img
+              src="https://via.placeholder.com/400x200"
+              alt="Captura del Sistema de Detección EPP"
+              class="card-img"
+            />
+            <div class="card-content">
+              <h3 class="card-title">Detección Automática de EPP</h3>
+              <p>
+                Entrenamiento y evaluación de modelos de Deep Learning (VGG16,
+                ResNet50) para la detección de Equipos de Protección Personal en
+                entornos industriales.
+              </p>
+              <div class="project-tags">
+                <span class="badge">Deep Learning</span>
+                <span class="badge">YOLO</span>
+              </div>
+              <br />
+              <a href="#" class="btn btn-secondary">Ver repositorio</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img
+              src="https://via.placeholder.com/400x200"
+              alt="Simulación de automatización neumática"
+              class="card-img"
+            />
+            <div class="card-content">
+              <h3 class="card-title">Automatización Neumática</h3>
+              <p>
+                Modelado y simulación de sistemas de control neumático
+                automatizado, basado en diagramas de bloques y procesos
+                estocásticos.
+              </p>
+              <div class="project-tags">
+                <span class="badge">Simulación</span>
+                <span class="badge">Control de Sistemas</span>
+              </div>
+              <br />
+              <a href="#" class="btn btn-secondary">Ver detalles</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="contacto" class="container">
+        <h2 class="section-title">Contacto</h2>
+        <form id="contact-form" class="card contact-form">
+          <div class="form-group">
+            <label for="nombre">Nombre Completo</label>
+            <input type="text" id="nombre" name="nombre" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Correo Electrónico</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+          <p id="form-status" class="form-status">
+            ¡Mensaje validado y enviado correctamente!
+          </p>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Ezequiel. Portafolio de Ingeniería de Software.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Design System | Portafolio</title>
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container navbar">
+        <div class="logo">Design System</div>
+        <nav>
+          <a href="index.html" class="btn btn-secondary"
+            >Volver al Portafolio</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <main class="container design-system-main">
+      <h1>Guía de Estilos y Componentes</h1>
+      <p>
+        Documentación de las decisiones visuales basadas en CSS Custom
+        Properties.
+      </p>
+      <br />
+
+      <section class="ds-section">
+        <h2>1. Paleta de Colores</h2>
+        <div class="grid-cards ds-color-grid">
+          <div>
+            <div class="color-box color-primary"></div>
+            <p><strong>Primary:</strong> var(--color-primary)</p>
+          </div>
+          <div>
+            <div class="color-box color-secondary"></div>
+            <p><strong>Secondary:</strong> var(--color-secondary)</p>
+          </div>
+          <div>
+            <div class="color-box color-background"></div>
+            <p><strong>Background:</strong> var(--color-background)</p>
+          </div>
+          <div>
+            <div class="color-box color-surface"></div>
+            <p><strong>Surface:</strong> var(--color-surface)</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="ds-section">
+        <h2>2. Tipografía</h2>
+        <h1>Encabezado H1 (3rem)</h1>
+        <h2>Encabezado H2 (2rem)</h2>
+        <h3>Encabezado H3 (1.5rem)</h3>
+        <p>
+          Párrafo estándar. El texto principal utiliza
+          <code>var(--color-text)</code> y la fuente
+          <code>var(--font-primary)</code>.
+        </p>
+        <p class="ds-muted">Texto secundario (muted).</p>
+        <a href="#">Ejemplo de Enlace</a>
+      </section>
+
+      <section class="ds-section">
+        <h2>3. Componentes</h2>
+
+        <h3>Botones</h3>
+        <div class="ds-component-group">
+          <button class="btn btn-primary">Botón Primario</button>
+          <button class="btn btn-secondary">Botón Secundario</button>
+        </div>
+
+        <h3>Badges / Skills</h3>
+        <div class="ds-component-group">
+          <span class="badge">HTML5</span>
+          <span class="badge">CSS3</span>
+          <span class="badge">JavaScript</span>
+        </div>
+
+        <h3>Card</h3>
+        <article class="card ds-card-preview">
+          <div class="card-content">
+            <h3 class="card-title">Título del Proyecto</h3>
+            <p>Descripción breve para documentar cómo se ve este componente.</p>
+          </div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
