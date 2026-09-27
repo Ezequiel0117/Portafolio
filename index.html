@@ -15,13 +15,21 @@
           <ul class="nav-links" id="nav-links">
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#sobre-mi">Sobre mí</a></li>
-            <li><a href="#habilidades">Habilidades</a></li>
             <li><a href="#proyectos">Proyectos</a></li>
-            <li><a href="design-system.html">Design System</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
             <li><a href="#contacto">Contacto</a></li>
+            <li>
+              <a
+                href="https://github.com/Ezequiel0117"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub</a
+              >
+            </li>
+            <li><a href="design-system.html">Design System</a></li>
           </ul>
         </nav>
-        <div>
+        <div class="navbar-actions">
           <button
             class="theme-toggle"
             id="theme-toggle"
@@ -41,7 +49,13 @@
               hidden
             />
           </button>
-          <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+          <button
+            class="menu-toggle"
+            id="menu-toggle"
+            aria-label="Abrir menú"
+            aria-controls="nav-links"
+            aria-expanded="false"
+          >
             ☰
           </button>
         </div>
@@ -51,7 +65,7 @@
     <main>
       <section id="inicio" class="container hero">
         <div class="hero-text">
-          <h1>Hola, soy Ezequiel</h1>
+          <h1>Hola, soy Ezequiel Jaramillo</h1>
           <h2>Estudiante de Ingeniería de Software</h2>
           <p>
             Estudiante de Ingeniería de Software con interés en desarrollo de
@@ -63,13 +77,6 @@
           <a href="#proyectos" class="btn btn-primary">Ver mis proyectos</a>
           <a href="#contacto" class="btn btn-secondary">Contáctame</a>
         </div>
-        <figure>
-          <img
-            src="assets/img/nero.jpg"
-            alt="Fotografía de Ezequiel"
-            class="hero-img"
-          />
-        </figure>
       </section>
 
       <section id="sobre-mi" class="container">
@@ -81,7 +88,7 @@
             multiplataforma. He trabajado en proyectos utilizando Python,
             Django, PostgreSQL, JavaScript, HTML/CSS y tecnologías de
             inteligencia artificial, incluyendo modelos de redes neuronales como
-            CNN y YOLO.
+            YOLO.
           </p>
           <p>
             Me interesa desarrollar soluciones eficientes y aprender
@@ -92,207 +99,14 @@
         </article>
       </section>
 
+      <section id="proyectos" class="container">
+        <h2 class="section-title">Proyectos Destacados</h2>
+        <div class="grid-cards" id="projects-list"></div>
+      </section>
+
       <section id="habilidades" class="container">
         <h2 class="section-title">Habilidades Técnicas</h2>
         <ul class="skills-grid" id="skills-list"></ul>
-      </section>
-
-      <section id="proyectos" class="container">
-        <h2 class="section-title">Proyectos Destacados</h2>
-        <div class="grid-cards">
-          <article class="card">
-            <img
-              src="https://via.placeholder.com/400x200"
-              alt="Vista del sistema EcoSoft para clasificación de residuos"
-              class="card-img"
-            />
-            <div class="card-content">
-              <h3 class="card-title">EcoSoft</h3>
-              <p class="project-type">
-                <strong>Proyecto académico | Aplicación web inteligente</strong>
-              </p>
-              <p class="project-summary">
-                Sistema para detectar y clasificar residuos mediante
-                inteligencia artificial, con historial de análisis, métricas,
-                autenticación, dashboard y mapa de puntos de reciclaje. Permite
-                identificar plástico, papel, vidrio y metal a partir de
-                imágenes, consultar resultados por usuario y visualizar
-                estadísticas para apoyar la toma de decisiones ambientales.
-              </p>
-              <div class="project-technologies">
-                <h4 class="project-tech-title">Tecnologías</h4>
-                <div class="project-tags">
-                  <span class="badge">
-                    <img
-                      src="assets/icons/python.svg"
-                      alt=""
-                      class="badge-icon"
-                      aria-hidden="true"
-                    />Python</span
-                  >
-                  <span class="badge">
-                    <img
-                      src="assets/icons/django.svg"
-                      alt=""
-                      class="badge-icon"
-                      aria-hidden="true"
-                    />Django</span
-                  >
-                  <span class="badge">
-                    <img
-                      src="assets/icons/postgresql.svg"
-                      alt=""
-                      class="badge-icon"
-                      aria-hidden="true"
-                    />PostgreSQL</span
-                  >
-                </div>
-              </div>
-              <br />
-              <a
-                href="https://github.com/Ezequiel0117/proyecto-final-Ezequiel-Jaramillo.git"
-                class="btn btn-secondary project-action"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Ver repositorio</a
-              >
-            </div>
-          </article>
-
-          <article class="card">
-            <img
-              src="https://via.placeholder.com/400x200"
-              alt="Juego de memoria con cartas"
-              class="card-img"
-            />
-            <div class="card-content">
-              <h3 class="card-title">Juego de Memoria con Cartas</h3>
-              <p class="project-type">
-                <strong>Proyecto académico | Desarrollo web interactivo</strong>
-              </p>
-              <p class="project-summary">
-                Juego de memoria con tres niveles de dificultad, modos
-                individual y multijugador, puntuación por movimientos,
-                temporizador, sonidos, pausa, reinicio y cartas aleatorizadas
-                con Fisher-Yates. Su diseño responsivo se adapta a distintos
-                dispositivos e incluye animaciones y efectos de sonido para
-                mejorar la experiencia de juego y hacer más clara la interacción
-                del usuario.
-              </p>
-              <div class="project-technologies">
-                <h4 class="project-tech-title">Tecnologías</h4>
-                <div class="project-tags">
-                  <span class="badge">
-                    <img
-                      src="assets/icons/html5.svg"
-                      alt=""
-                      class="badge-icon"
-                      aria-hidden="true"
-                    />HTML5</span
-                  >
-                  <span class="badge">
-                    <img
-                      src="assets/icons/css.svg"
-                      alt=""
-                      class="badge-icon"
-                      aria-hidden="true"
-                    />CSS3</span
-                  >
-                  <span class="badge">
-                    <img
-                      src="assets/icons/javascript.svg"
-                      alt=""
-                      class="badge-icon"
-                      aria-hidden="true"
-                    />JavaScript</span
-                  >
-                </div>
-              </div>
-              <br />
-              <a
-                href="https://github.com/Ezequiel0117/Juego-Tecnica.git"
-                class="btn btn-secondary project-action"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Ver repositorio</a
-              >
-            </div>
-          </article>
-
-          <article class="card">
-            <img
-              src="https://via.placeholder.com/400x200"
-              alt="Sistema integral de gestión médica"
-              class="card-img"
-            />
-            <div class="card-content">
-              <h3 class="card-title">Sistema Integral de Gestión Médica</h3>
-              <p class="project-type">
-                <strong>Proyecto académico | Aplicación web empresarial</strong>
-              </p>
-              <p class="project-summary">
-                Sistema para gestionar pacientes, citas, historias clínicas,
-                consultas, facturación y pagos con PayPal. Incluye
-                autenticación, auditoría, panel administrativo, documentos PDF y
-                14 modelos principales optimizados con relaciones y validaciones
-                personalizadas.
-              </p>
-              <div class="project-technologies">
-                <h4 class="project-tech-title">Tecnologías</h4>
-                <div class="project-tags">
-                  <span class="badge">
-                    <img
-                      src="assets/icons/python.svg"
-                      alt=""
-                      class="badge-icon"
-                      aria-hidden="true"
-                    />Python</span
-                  >
-                  <span class="badge">
-                    <img
-                      src="assets/icons/django.svg"
-                      alt=""
-                      class="badge-icon"
-                      aria-hidden="true"
-                    />Django</span
-                  >
-                  <span class="badge">
-                    <img
-                      src="assets/icons/postgresql.svg"
-                      alt=""
-                      class="badge-icon"
-                      aria-hidden="true"
-                    />PostgreSQL</span
-                  >
-                  <span class="badge">
-                    <img
-                      src="assets/icons/html5.svg"
-                      alt=""
-                      class="badge-icon"
-                      aria-hidden="true"
-                    />HTML5</span
-                  >
-                  <span class="badge">
-                    <img
-                      src="assets/icons/javascript.svg"
-                      alt=""
-                      class="badge-icon"
-                      aria-hidden="true"
-                    />JavaScript</span
-                  >
-                </div>
-              </div>
-              <br />
-              <a
-                href="https://github.com/Ezequiel0117/sistema_medico.git"
-                class="btn btn-secondary project-action"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Ver repositorio</a
-              >
-            </div>
-          </article>
-        </div>
       </section>
 
       <section id="contacto" class="container">
