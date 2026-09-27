@@ -647,6 +647,11 @@ textarea:focus {
   outline: 0;
 }
 
+input[aria-invalid="true"],
+textarea[aria-invalid="true"] {
+  border-color: var(--color-coral);
+}
+
 footer {
   background-color: var(--color-text);
   border-top: 1px solid var(--color-border);

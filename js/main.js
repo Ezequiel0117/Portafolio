@@ -315,28 +315,61 @@ document.addEventListener("DOMContentLoaded", () => {
   const formStatus = document.getElementById("form-status");
 
   if (contactForm) {
+    const nameInput = document.getElementById("nombre");
+    const emailInput = document.getElementById("email");
+    const messageInput = document.getElementById("mensaje");
+    const fields = [nameInput, emailInput, messageInput];
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+    const namePattern = /^[\p{L}]+(?:[ '\u2019-][\p{L}]+)*$/u;
+
+    const clearFieldError = (field) => {
+      field.setCustomValidity("");
+      field.removeAttribute("aria-invalid");
+    };
+
+    fields.forEach((field) => {
+      field.addEventListener("input", () => {
+        clearFieldError(field);
+        formStatus.textContent = "";
+        formStatus.style.display = "none";
+      });
+    });
+
     contactForm.addEventListener("submit", (e) => {
       e.preventDefault();
 
-      const nombre = document.getElementById("nombre").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const mensaje = document.getElementById("mensaje").value.trim();
+      const nombre = nameInput.value.trim();
+      const email = emailInput.value.trim();
+      const mensaje = messageInput.value.trim();
 
-      if (nombre.length < 3) {
-        alert("El nombre debe tener al menos 3 caracteres.");
+      fields.forEach(clearFieldError);
+
+      if (nombre.length < 3 || !namePattern.test(nombre)) {
+        nameInput.setCustomValidity(
+          "Escribe un nombre válido de al menos 3 caracteres.",
+        );
+        nameInput.setAttribute("aria-invalid", "true");
+        nameInput.reportValidity();
         return;
       }
 
-      if (!email.includes("@")) {
-        alert("Por favor, ingresa un correo válido.");
+      if (!emailPattern.test(email)) {
+        emailInput.setCustomValidity("Escribe un correo electrónico válido.");
+        emailInput.setAttribute("aria-invalid", "true");
+        emailInput.reportValidity();
         return;
       }
 
       if (mensaje.length < 10) {
-        alert("El mensaje es demasiado corto.");
+        messageInput.setCustomValidity(
+          "El mensaje debe tener al menos 10 caracteres.",
+        );
+        messageInput.setAttribute("aria-invalid", "true");
+        messageInput.reportValidity();
         return;
       }
 
+      formStatus.textContent = "¡Mensaje validado y enviado correctamente!";
       formStatus.style.display = "block";
       contactForm.reset();
 
