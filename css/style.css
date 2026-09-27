@@ -399,10 +399,6 @@ header {
   text-transform: uppercase;
 }
 
-.card-content > br {
-  display: none;
-}
-
 .project-actions {
   align-items: center;
   display: flex;
@@ -412,8 +408,7 @@ header {
   margin-top: var(--space-md);
 }
 
-.project-action,
-.gallery-action {
+.project-actions .btn {
   margin-top: 0;
 }
 
@@ -489,15 +484,14 @@ header {
   width: 2.5rem;
 }
 
-.gallery-nav:hover,
-.gallery-nav:focus-visible {
-  background-color: var(--color-primary);
-  color: var(--color-text);
-}
-
 .gallery-nav:hover {
   background-color: var(--color-primary);
   color: var(--color-background);
+}
+
+.gallery-nav:focus-visible {
+  background-color: var(--color-primary);
+  color: var(--color-text);
 }
 
 .gallery-counter {
